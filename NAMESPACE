@@ -3,4 +3,5 @@
 export(codoInSeq)
 export(codons_to_proteins)
 export(dna_to_rna)
+export(plot_count_aa)
 export(random_seq_dna)
