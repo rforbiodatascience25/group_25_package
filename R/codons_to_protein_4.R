@@ -12,10 +12,10 @@
 #' @export
 #'
 #' @examples
-#' translate_codons("AGU")
+#' codons_to_proteins("AGU")
 #'
 #' codons <- c("AUG", "UUU", "AGA")
-#' translate_codons(codons)
+#' codons_to_proteins(codons)
 #'
 codons_to_proteins <- function(codons) {
   protein_sequence <- paste0(codo[codons], collapse = "")
