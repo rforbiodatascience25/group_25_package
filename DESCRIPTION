@@ -10,7 +10,7 @@ Authors@R:
     person(given = "Szymon",
            family = "Cholewinski",
            role = "aut",
-           email = "szcholewinski@gmail.com")
+           email = "szcholewinski@gmail.com"),
     person(given = "Catarina",
            family = "Anastácio",
            role = "aut",
