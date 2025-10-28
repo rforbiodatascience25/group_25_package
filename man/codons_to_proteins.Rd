@@ -20,9 +20,9 @@ This function takes a vector of RNA codons and translates them into a
 single aa sequence, using the codon table
 }
 \examples{
-translate_codons("AGU")
+codons_to_proteins("AGU")
 
 codons <- c("AUG", "UUU", "AGA")
-translate_codons(codons)
+codons_to_proteins(codons)
 
 }
