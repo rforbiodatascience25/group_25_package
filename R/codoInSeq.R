@@ -1,4 +1,4 @@
-#' DivideSequence
+#' codoInSeq
 #'
 #' @param sequence this is the base sequence to get codons from
 #' @param start this is point in sequence from which we start getting codons
