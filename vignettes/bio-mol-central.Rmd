@@ -1,0 +1,112 @@
+---
+title: "Guide to bio.mol.central (vignette)"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{bio-mol-central}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+### Introduction to the function
+
+The `bio.mol.central` package relates to the **Central Dogma of Molecular Biology** and presents five simple, and illustrative, functions. Together, these functions simulate the flow of genetic information from **DNA → RNA → Protein**, while utilizing visualizations and string manipulation.
+
+The vignette demonstrates how each function works (individually and in sequence) to represent the biological processes of replication, transcription, and translation.
+
+#### Function 1: `random_seq_dna()`
+
+This function simulates the creation of a random DNA sequence of specified length.
+
+```{r}
+random_seq_dna <- function(dna_size){
+  dna_seq_generator <- sample(c("A", "T", "G", "C"), size = dna_size, replace = TRUE)
+  concat_dna_seq <- paste0(dna_seq_generator, collapse = "")
+  return(concat_dna_seq)
+  }
+```
+
+Example:
+
+```{r}
+dna <- random_seq_dna(30)
+dna
+```
+
+#### Function 2: `dna_to_rna()`
+
+This function converts a DNA sequence into RNA by replacing all **T** with **U**.
+
+```{r}
+dna_to_rna <- function(dna_sequence) {
+  rna_sequence <- gsub("T", "U", dna_sequence)
+  return(rna_sequence)
+}
+```
+
+Example:
+
+```{r}
+rna <- dna_to_rna(dna)
+rna
+```
+
+#### Function 3: `codonInSeq()`
+
+Splits an RNA sequence into codons, which are triplets of nucleotides that encode into one amino acid.
+
+```{r}
+codoInSeq <- function(sequence, start = 1){
+  lengthSeq <- nchar(sequence)
+  codons <- substring(sequence,
+                      first = seq(from = start, to = lengthSeq-3+1, by = 3),
+                      last = seq(from = 3+start-1, to = lengthSeq, by = 3))
+  return(codons)
+}
+```
+
+Example:
+
+```{r}
+codons <- codoInSeq(rna)
+codons
+```
+
+#### Function 4: `codons_to_proteins_4()`
+
+Translates RNA codons into an amino acid sequence using a predefined codon table. Assumes that the codon table (`codo)` is defined in your package environment.
+
+```{r}
+codons_to_proteins <- function(codons) {
+  protein_sequence <- paste0(codo[codons], collapse = "")
+  return(protein_sequence)
+}
+```
+
+Example:
+
+```{r}
+protein <- codons_to_proteins(codons)
+protein
+```
+
+#### Function 5: `()`
+
+This function visualizes and plots the amino acid composition of a protein sequence.
+
+It uses stringr for character handling and ggplot2 for visualization.
+
+Example:
+
+```         
+```
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(bio.mol.central)
+```
