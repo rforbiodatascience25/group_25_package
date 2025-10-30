@@ -15,7 +15,6 @@ Authors@R:
            family = "Anastácio",
            role = "aut",
            email = "s253709@dtu.dk"),
-           )
     person(given = "Magnus",
            family = "Strange",
            role = "aut",
