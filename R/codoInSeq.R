@@ -15,7 +15,7 @@
 
 codoInSeq <- function(sequence, start = 1){
   
-  if (any(str_detect(sequence, "T"))) {
+  if (any(stringr::str_detect(sequence, "T"))) {
     stop("DNA was detected - insert RNA sequence")
   }
   
