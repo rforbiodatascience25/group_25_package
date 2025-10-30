@@ -17,5 +17,6 @@
 #'
 dna_to_rna <- function(dna_sequence) {
   rna_sequence <- gsub("T", "U", dna_sequence)
+  message("Did you remember to insert the coding string?")
   return(rna_sequence)
 }
