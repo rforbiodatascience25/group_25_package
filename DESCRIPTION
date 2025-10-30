@@ -3,7 +3,7 @@ Type: Package
 Title: Central Dogma of Molecular Biology 
 Version: 0.1.0
 Authors@R:
-  c(person(given = "André",
+  c(person(given = "Andre",
            family = "Godinho",
            role = c("aut", "cre"), # There must be a "cre", but there can only be one
            email = "s253707@dtu.dk"), 
