@@ -1,6 +1,6 @@
 ---
 title: "Guide to bio.mol.central (vignette)"
-output: rmarkdown::html_vignette
+output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{bio-mol-central}
   %\VignetteEngine{knitr::rmarkdown}
