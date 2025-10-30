@@ -7,7 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-link to the group´s GitHub: ***PUT AFTER***
+link to the group´s GitHub: https://github.com/rforbiodatascience25/group_25_package
 
 ### Introduction to the package and its functions
 
