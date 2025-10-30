@@ -1,7 +1,9 @@
 #' codoInSeq
 #'
-#' @param sequence this is the base sequence to get codons from
-#' @param start this is point in sequence from which we start getting codons
+#' Extracts RNA codons and checks for DNA
+#'
+#' @param sequence this is the base RNA sequence to get codons from
+#' @param start this is the point in sequence from which we start getting codons
 #'
 #' @returns these are the codons in sequence from selected starting point
 #' @export
@@ -10,7 +12,13 @@
 #'x <- "UUUUCUUAUUGUUUCUCCUACUGCUUAUCAUAAUGAUUGUCGUAGUGGCUUCCUCAUCGUCUCCCCCAC"
 #'codoInSeq(x, start = 1)
 #'codoInSeq(x, start = 2)
+
 codoInSeq <- function(sequence, start = 1){
+  
+  if (any(str_detect(sequence, "T"))) {
+    stop("DNA was detected - insert RNA sequence")
+  }
+  
   lengthSeq <- nchar(sequence)
   codons <- substring(sequence,
                       first = seq(from = start, to = lengthSeq-3+1, by = 3),
