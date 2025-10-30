@@ -142,9 +142,9 @@ This pipeline shows the transformation from DNA → RNA → Protein → Visualiz
 
 ### Discussion
 
-#### Dependencies of the package (***TASK 3 THINGS..... IMPROVE THIS PART!!!!!!)***
+#### Dependencies of the package
 
-Dependencies include the packages `stringr` and `ggplot2`. Their usage is in function 5 for character handling and visualization.
+Dependencies include the packages `stringr` and `ggplot2`. Their usage is in function 5 for character handling and visualization. stringr is also used to check for DNA in the codon-to-protein function.
 
 ***RESPOND TO THIS: how you added the two packages as dependencies***
 
