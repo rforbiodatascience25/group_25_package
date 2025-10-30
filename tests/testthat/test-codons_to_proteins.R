@@ -1,5 +1,8 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+#single test case of two codons to amino acids
+test_that("codons_to_proteins translates codons correctly", {
+  expect_equal(codons_to_proteins(c("AUG", "AAU")), "MN")
 })
 
-codons_to_proteins(c("AAU","AUG"))
+test_that("codons_to_proteins handles stop codons", {
+  expect_equal(codons_to_proteins(c("AUG", "UAA")), "M*")
+})
