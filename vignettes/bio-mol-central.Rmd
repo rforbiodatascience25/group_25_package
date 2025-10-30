@@ -54,7 +54,7 @@ rna
 
 #### Function 3: `codonInSeq()`
 
-Splits an RNA sequence into codons, which are triplets of nucleotides that encode into one amino acid.
+Gets all codons as separate strings from indicated point in given sequence. The codons are identified based on codon:protein table from 'codo'variable.
 
 ```{r}
 codoInSeq <- function(sequence, start = 1){
@@ -156,7 +156,10 @@ Limiting and minimizing dependencies is a good practice because:
 
 However, they also ensure that all functions and features run as expected while sharing and collaborating the package with others. And in this particular case, using packages like `ggplot2` is justified because visualization is central to the function's (and package's) purpose.
 
-Import styles (***NOT SUREEE***):
+Import styles (***NOT SUREEE***-I am also not sure, but I think I have improved it):
+
+Besides some coding differences, the issue lies like with library() and '::' operator. Usage of the `@importFrom package function` might cause some issues if functions from packages used this way have some names. Contrary `package::function()` makes sure that intended function is used. Second option looks like obvious choice, but it also makes code larger and possibly harder to interpret (although it makes it also more straightforward to interpret, so there is some balance here). First option is better choice in some specific use cases, but usually second option would be chosen for certainty.
+
 
 -   `@importFrom package function` brings only selected functions into the namespace.
 
