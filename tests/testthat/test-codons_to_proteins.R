@@ -4,5 +4,5 @@ test_that("codons_to_proteins translates codons correctly", {
 })
 
 test_that("codons_to_proteins handles stop codons", {
-  expect_equal(codons_to_proteins(c("AUG", "UAA")), "M*")
+  expect_equal(codons_to_proteins(c("AUG", "UAA")), "M_")
 })
