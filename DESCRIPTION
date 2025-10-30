@@ -16,6 +16,11 @@ Authors@R:
            role = "aut",
            email = "s253709@dtu.dk")
            )
+    person(given = "Magnus",
+           family = "Strange",
+           role = "aut",
+           email = "s190867@dtu.dk")
+           )
 Description: More about what it does (maybe more than one line).
     Continuation lines should be indented.
 License: MIT + file LICENSE
