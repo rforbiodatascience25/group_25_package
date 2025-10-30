@@ -144,9 +144,7 @@ This pipeline shows the transformation from DNA → RNA → Protein → Visualiz
 
 #### Dependencies of the package
 
-Dependencies include the packages `stringr` and `ggplot2`. Their usage is in function 5 for character handling and visualization. stringr is also used to check for DNA in the codon-to-protein function.
-
-***RESPOND TO THIS: how you added the two packages as dependencies***
+Dependencies include the packages `stringr` and `ggplot2`. Their usage is in function 5 for character handling and visualization. stringr is also used to check for DNA in the codon-to-protein function. Dependencies were added as Imports in the DESCRIPTION file of the package, meaning they are automatically installed for use when the package is called.
 
 Limiting and minimizing dependencies is a good practice because:
 
@@ -158,8 +156,7 @@ However, they also ensure that all functions and features run as expected while 
 
 Import styles (***NOT SUREEE***-I am also not sure, but I think I have improved it):
 
-Besides some coding differences, the issue lies like with library() and '::' operator. Usage of the `@importFrom package function` might cause some issues if functions from packages used this way have some names. Contrary `package::function()` makes sure that intended function is used. Second option looks like obvious choice, but it also makes code larger and possibly harder to interpret (although it makes it also more straightforward to interpret, so there is some balance here). First option is better choice in some specific use cases, but usually second option would be chosen for certainty.
-
+Besides some coding differences, the issue lies with library() and '::' operator. Usage of the `@importFrom package function` might cause some issues if functions from packages used this way have some names. Contrary `package::function()` makes sure that intended function is used. Second option looks like the obvious choice, but it also makes the code longer and possibly harder to interpret (although it also makes it  more straightforward to interpret, so there is some balance here). The first option is a better choice in some specific use cases, but usually the second option would be chosen for certainty.
 
 -   `@importFrom package function` brings only selected functions into the namespace.
 
