@@ -1,7 +1,17 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+test_that("dna_to_rna converts T to U for a single sequence", {
+  expect_equal(dna_to_rna("ATGCTTAGGCGT"), "AUGCUUAGGCGU")
 })
 
-dna_to_rna(c("ATGCTTAGGCGT", "TTTGGGAAA"))
-dna_to_rna("ATGUUUUUAGCGT")
-dna_to_rna("ATGTTTTTGGGGGAAAAGCGT")
+test_that("dna_to_rna converts T -> U for multiple sequences", {
+  expect_equal(
+    dna_to_rna(c("ATGCTTAGGCGT", "TTTGGGAAA")),
+    c("AUGCUUAGGCGU", "UUUGGGAAA")
+  )
+})
+
+test_that("dna_to_rna handles sequences with many istances of T", {
+  expect_equal(
+    dna_to_rna("ATGTTTTTGGGGGAAAAGCGT"),
+    "AUGUUUUUGGGGGAAAAGCGU"
+  )
+})
