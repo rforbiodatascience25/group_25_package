@@ -158,9 +158,9 @@ However, they also ensure that all functions and features run as expected while 
 
 Import styles (***NOT SUREEE***):
 
--    `@importFrom package function` brings only selected functions into the namespace.
+-   `@importFrom package function` brings only selected functions into the namespace.
 
--    `package::function()` calls are explicit and safest for occasional use.
+-   `package::function()` calls are explicit and safest for occasional use.
 
 #### **Future work and Use cases**
 
